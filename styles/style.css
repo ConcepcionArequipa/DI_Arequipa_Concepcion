@@ -1,0 +1,182 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #d9e4ff, #fce1ff, #d0fff1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 0;
+    overflow-y: auto;
+}
+
+/* ======== CONTENEDOR PRINCIPAL ======== */
+.form-container {
+    background-color: #ffffff;
+    width: 400px;
+    padding: 35px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(149, 157, 165, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ======== TÍTULOS ======== */
+h1 {
+    text-align: center;
+    color: #5b4b8a;
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h2 span {
+    font-weight: bold;
+    color: #333;
+}
+
+h2 i {
+    color: #b93b9f;
+}
+
+/* ======== FORMULARIO ======== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="color"],
+input[type="range"],
+input[type="file"] {
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: #fafaff;
+}
+
+input:focus {
+    border-color: #84c4be;
+    box-shadow: 0 0 6px rgba(132, 196, 190, 0.6);
+    outline: none;
+}
+
+/* ======== GRUPOS DE RADIO Y CHECKBOX ======== */
+.radio-group,
+.checkbox-group {
+    margin-bottom: 15px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* ======== BOTONES ======== */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background: linear-gradient(135deg, #6ee7b7, #3b82f6);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(59, 130, 246, 0.3);
+}
+
+input[type="reset"] {
+    background: linear-gradient(135deg, #f87171, #ec4899);
+    box-shadow: 0 3px 8px rgba(236, 72, 153, 0.3);
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 14px rgba(59, 130, 246, 0.4);
+    background: linear-gradient(135deg, #34d399, #2563eb);
+}
+
+input[type="reset"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 14px rgba(236, 72, 153, 0.4);
+    background: linear-gradient(135deg, #f43f5e, #c026d3);
+}
+
+/* ======== ANIMACIÓN DE ENTRADA ======== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 48%;
+        font-size: 14px;
+    }
+}

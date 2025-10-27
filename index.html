@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Formulario de Registro</h1>
+        <h2><span>Realizado por: </span><i style="color: rgb(55, 10, 95);">Concepcion Arequipa</i></h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label>Nombre completo:</label>
+            <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+
+            <label>Contraseña:</label>
+            <input type="password" name="contraseña" placeholder="Crea una contraseña" required>
+
+            <label>Correo electronico:</label>
+            <input type="email" name="correo" placeholder="usuario@correo.com" required>
+
+            <label>Edad:</label>
+            <input type="number" name="edad" min="1" max="100" required>
+
+            <label>Telefono:</label>
+            <input type="tel" name="telefono" placeholder="+593...">
+
+            <label>Pagina web:</label>
+            <input type="url" name="pagina" placeholder="https://tusitio.com">
+
+            <label>Fecha de nacimiento:</label>
+            <input type="date" name="fecha_nacimiento">
+
+            <label>Hora de cita:</label>
+            <input type="time" name="hora_cita">
+
+            <label>Fecha y hora del evento:</label>
+            <input type="datetime-local" name="evento">
+
+            <label>Mes de pago:</label>
+            <input type="month" name="mes_pago">
+
+            <label>Semana actual:</label>
+            <input type="week" name="semana">
+
+            <label>Color favorito:</label>
+            <input type="color" name="color_fav">
+
+            <label>Nivel de satisfaccion:</label>
+            <input type="range" name="nivel" min="0" max="10">
+
+            <label>Genero:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="genero" value="M">Masculino</label>
+                <label><input type="radio" name="genero" value="F">Femenino</label>
+            </div>
+
+            <label>Intereses:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="intereses" value="tecnologia">Tecnologia</label>
+                <label><input type="checkbox" name="intereses" value="deporte">Deporte</label>
+                <label><input type="checkbox" name="intereses" value="arte">Arte</label>
+            </div>
+
+            <label>Subir archivo:</label>
+            <input type="file" name="foto">
+
+            <input type="hidden" name="id" value="001">
+
+            <div class="buttons">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
