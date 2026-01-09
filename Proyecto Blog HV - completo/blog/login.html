@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Login</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-full flex items-center justify-center p-[32px] text-[#0f172a] bg-gradient-to-b from-indigo-50 to-slate-50 m-0">
+    <div
+        class="max-w-[980px] h-[560px] grid grid-cols-[1fr_1fr] overflow-hidden shadow-[0_10px_30px_rgba(2,6,23,0.484)] bg-[#ffffff] rounded-[14px] w-full">
+        <aside
+            class="relative flex items-center justify-center p-[28px] bg-cover bg-center text-white h-[500px] w-full
+    bg-[linear-gradient(135deg,rgba(1,14,8,0.85),rgba(6,182,212,0.85)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop')]">
+            <div class="max-w-[360px] text-left">
+                <h1 class="mb-[6px] text-[28px] tracking-[-0.2px]">Mi CV</h1>
+                <p class="m-0 text-[rgba(255,255,255,0.9)] leading-[1.35]">Accede a tu cuenta rápidamente.</p>
+            </div>
+        </aside>
+        <main
+            class="flex align-center justify-center py-10 px-12 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.95))]">
+            <form id="loginForm" class="w-full max-w-[360px]" novalidate>
+
+                <h2 class="text-[22px] mb-[6px]">Iniciar sesión</h2>
+
+                <p class="mb-5 text-[#6b7280] text-[13px]">Introduce tu usuario y contraseña para entrar.</p>
+                <div class="mb-[14px]">
+                    <label for="email">Correo o usuario</label>
+                    <input id="email" name="email" type="text" inputmode="email" autocomplete="username"
+                        placeholder="lore_chulde@gmail.com" required>
+                </div>
+
+                <div class="field password-row">
+                    <label for="password">Contraseña</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password"
+                        placeholder="••••••••" required minlength="6">
+                    <button type="button" class="toggle-pass" aria-label="Mostrar contraseña"
+                        id="togglePass">Mostrar</button>
+                </div>
+
+                <div class="flex gap-3 items-center mb-[14px] justify-between">
+
+                    <label class="flex items-center gap-2"><input type="checkbox" id="remember"> <span
+                            class="text-[13px] text-[#6b7280]">Recordarme</span></label>
+                    <a href="#" class="text-[13px] text-[#6b7280] text-[#06b5d439] no-underline">¿Olvidaste tu
+                        contraseña?</a>
+                </div>
+
+                <button class="inline-flex items-center justify-center w-full py-[12px] px-[14px] rounded-[12px] border-none font-semibold text-[15px] cursor-pointer text-white bg-[linear-gradient(90deg,#022b20,#06b5d439)] shadow-[0_8px_18px_rgba(79,70,229,0.18)] active:translate-y-[1px] transition-transform" type="submit">Entrar</button>
+
+                <div class="h-[1px] bg-[#eef2ff] my-[18px] rounded-[2px]" aria-hidden="true"></div>
+
+                <div class="mt-[12px] text-center text-[13px] text-[#6b7280]">
+                    ¿No tienes cuenta? <a href="register.html">Regístrate</a>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>

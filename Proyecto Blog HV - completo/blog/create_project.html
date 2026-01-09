@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Proyecto</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    
+</head>
+
+<body class="m-0 p-0 box-border font-sans bg-[#f3f4f6]">
+
+    <!-- container -->
+    
+    <div class="flex min-h-[100vh]">
+
+        <!-- SIDEBAR -->
+        <aside class="w-[220px] bg-gray-600 text-white p-[20px] flex-shrink-0 h-[100vh] overflow-y-auto">
+            <!-- logo -->
+            <h2 class="text-[24px] mb-[30px] text-center font-semibold">Mi Panel</h2>
+            <nav>
+                <a href="dashboard.html" class="block p-3 mb-2.5 rounded text-gray-300 no-underline transition duration-300 hover:bg-gray-600 hover:text-white">Dashboard</a>
+                <a href="#" class="block p-3 mb-2.5 rounded text-gray-300 no-underline transition duration-300 hover:bg-gray-600 hover:text-white">Usuarios</a>
+                <a href="#" class="block p-3 mb-2.5 rounded text-white no-underline transition duration-300 bg-gray-600">Proyectos</a>
+                <a href="#" class="block p-3 mb-2.5 rounded text-gray-300 no-underline transition duration-300 hover:bg-gray-600 hover:text-white">Reportes</a>
+                <a href="#" class="block p-3 mb-2.5 rounded text-gray-300 no-underline transition duration-300 hover:bg-gray-600 hover:text-white">Configuración</a>
+            </nav>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+         <!-- main -->
+         
+        <main class="flex-1 p-[20px] bg-gray-100">
+
+            <!-- HEADER -->
+             <!-- topbar -->
+            <header class="flex justify-between items-center mb-6">
+                <h1 class="text-4xl font-semibold">Crear Proyecto</h1>
+                <!-- logout-btn -->
+                <button class="bg-[crimson] text-white px-[15px] py-[8px] border-0 cursor-pointer rounded-[5px] transition duration-300 hover:bg-[#a50000]">Cerrar sesión</button>
+            </header>
+
+            <!-- SECCIÓN DE FORMULARIO -->
+            <section class="tabla-section">
+
+                <div class="flex justify-between items-center">
+                    <h2 class="mb-[15px] text-2xl font-semibold">Nuevo Proyecto</h2>
+                    <a href="dashboard.html" class="btn-nuevo">⬅ Regresar</a>
+                </div>
+
+                <!-- card form-card -->
+                <div class=" w-[500px]  bg-white p-[32px] rounded-[18px] shadow-[0_6px_18px_rgba(0,0,0,0.12)]">
+
+                    <form id="formProyecto" class="flex flex-col gap-[16px]">
+                        <!-- field -->
+                        <div class="flex flex-col">
+                            <label for="titulo" class="text-sm mb-1 text-[var(--muted)]">Título del proyecto</label>
+                            
+                            <input id="titulo" type="text" required class="p-[11px] border border-gray-300 rounded-[12px] text-[15px]">
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="descripcion" class="text-sm mb-1 text-[var(--muted)]">Descripción</label>
+                            
+                            <textarea id="descripcion" required class="p-[11px] border border-gray-300 rounded-[12px] text-[15px] resize-y min-h-[90px]"></textarea>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="imagen" class="text-sm mb-1 text-[var(--muted)]">Imagen del proyecto</label>
+                            <input id="imagen" type="file" accept="image/*" class="p-[11px] border border-gray-300 rounded-[12px] text-[15px]">
+                            <!-- preview -->
+                            <img id="previewImg" class="w-full rounded-[12px] mt-[8px] hidden show:block" alt="Vista previa de la imagen">
+                        </div>
+                        <!-- btn -->
+                        <button class="p-[12px] bg-accent text-white border-0 rounded-[12px] text-base cursor-pointer hover:opacity-90 transition duration-300" type="submit">Guardar Proyecto</button>
+
+                    </form>
+                </div>
+
+            </section>
+        </main>
+
+    </div>
+
+    <!-- SCRIPT CORRECTO -->
+    <script src="assets/js/create_project.js"></script>
+    <script src="assets/js/include.js"></script>
+</body>
+
+</html>

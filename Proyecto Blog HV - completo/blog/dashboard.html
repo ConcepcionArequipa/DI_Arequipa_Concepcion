@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="m-0 p-0 box-border font-sans bg-gray-100">
+    <!-- container -->
+    <div class="flex min-h-[100vh]"> 
+        <!-- Sidebar -->
+        <div data-include="components/sidebar.html" class=""></div>
+
+        <!-- container -->
+        <main class="flex-1 bg-gray-100 p-5">
+            <!-- Header -->
+            <div data-include="components/header.html"></div>
+            <!-- Tarjetas de resumen -->
+
+            <!-- cards -->
+            <section class="flex gap-5 mb-7 ">
+
+                <!-- card -->
+                <div class="flex-[1] bg-white p-5 rounded-lg shadow-sm">
+
+                    <h3 class="text-lg mb-1">Proyectos</h3>
+                    <p id="proyectosCount">0 registrados</p>
+                </div>
+                <div class="flex-[1] bg-white p-5 rounded-lg shadow-sm">
+                    <h3 class="text-lg mb-1">Usuarios</h3>
+                    <p>4 registrados</p>
+                </div>
+                <div class="flex-[1] bg-white p-5 rounded-lg shadow-sm">
+                    <h3 class="text-lg mb-1">Visitas</h3>
+                    <p>325 hoy</p>
+                </div>
+            </section>
+
+            <!-- Tabla de proyectos -->
+             <!-- tabla-section -->
+
+            <section class="tabla-section">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="mb-3">Últimos Proyectos</h2>
+                    <a href="create_project.html" class="bg-blue-500 text-white px-3 py-2 rounded hover:bg-blue-600 transition">➕ Crear Proyecto</a>
+                </div>
+                <table id="tablaProyectos" class="w-full bg-white border-collapse rounded-lg overflow-hidden shadow-sm">
+                    <thead class="bg-gray-600 text-white">
+                        <tr>
+                            <th class="p-3 text-left border-b border-gray-200">ID</th>
+                            <th class="p-3 text-left border-b border-gray-200">Título</th>
+                            <th class="p-3 text-left border-b border-gray-200">Descripción</th>
+                            <th class="p-3 text-left border-b border-gray-200">Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se cargarán los proyectos -->
+                         
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Footer -->
+            <div data-include="components/footer.html"></div>
+        </main>
+    </div>
+
+    <script src="assets/js/include.js"></script>
+    <script src="assets/js/load_projects.js"></script>
+
+</body>
+</html>
